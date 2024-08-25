@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 12:07:17 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/08/20 17:47:32 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/08/23 15:56:40 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,13 @@ int     verif_nbr(std::string elements)
     return i;
 }
 
-void    ScalarConverter::convert(std::string &elements)
+void    convert_bis()
 {
     
+}
+
+void    ScalarConverter::convert(std::string &elements)
+{
     if (elements.find(".") && verif_nbr(elements.substr(0, elements.find("."))))
     {
         if (elements.find("f") == elements.length() && verif_nbr(elements.substr(elements.find(".") + 1, elements.length() - 1)))
@@ -59,6 +63,7 @@ void    ScalarConverter::convert(std::string &elements)
     }
     else if (verif_nbr(elements) == elements.length())
     {
+        int nbr = atoi(elements);
         is_int(elements);
     }
     else
