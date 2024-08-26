@@ -14,10 +14,9 @@
 
 int main(int argc, char **argv)
 {
-    //ScalarConverter nbr;
     if (argc > 1)
     {
-        for(int i = 0; argv[i]; ++i)
+        for(int i = 1; argv[i]; ++i)
         {
             std::string arg = argv[i];
             ScalarConverter::convert(arg); 
