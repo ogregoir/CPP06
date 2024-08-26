@@ -6,7 +6,7 @@
 /*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 12:07:17 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/08/20 17:47:32 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/08/21 17:56:02 by ogregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,32 +45,54 @@ int     verif_nbr(std::string elements)
     return i;
 }
 
+void    convert_msg(std::string elements)
+{
+    int i = static_cast<int>(elements);
+    std::cout << "char: " << static_cast<char>(elements) << std::endl;
+    std::cout << "int: " <<  << std::endl;
+}
+
+
 void    ScalarConverter::convert(std::string &elements)
 {
     
     if (elements.find(".") && verif_nbr(elements.substr(0, elements.find("."))))
     {
         if (elements.find("f") == elements.length() && verif_nbr(elements.substr(elements.find(".") + 1, elements.length() - 1)))
-            is_float(elements);
+        {
+            float f = atof(elements.c_str());
+            is_float(f);
+        }
         else if (verif_nbr(elements.substr(elements.find(".") + 1, elements.length() - 1)))
-            is_double(elements);
+        {
+            double d = atof(elements.c_str());
+            is_double(d);
+        }
+           
         else
             std::cout << "Is not scalar type" << std::endl;
     }
     else if (verif_nbr(elements) == elements.length())
     {
-        is_int(elements);
+        int in = atoi(elements.c_str());
+        is_int(in);
     }
     else
     {
-        int i = 0;
+        if (std::isalpha(elements[0]) == 0)
+        {
+            if (elements.length() > 1)
+                is_alpha(elements[0]);
+            else
+                
+        }
         while(elements[i])
         {
-            if (std::isalpha(elements[i]) == 0)
+            if ()
                 break;
             i++;
         }
-        if (i == elements.length())
+        if (i == )
             is_alpha(elements);
         else
             std::cout << "Is not scalar type" << std::endl;
