@@ -6,11 +6,10 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 12:07:17 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/08/26 03:41:17 by marvin           ###   ########.fr       */
+/*   Updated: 2024/08/26 03:54:03 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstdio>
 #include "ScalarConverter.hpp"
 
 ScalarConverter::ScalarConverter(){
